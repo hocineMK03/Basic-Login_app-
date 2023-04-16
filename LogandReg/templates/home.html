@@ -1,0 +1,15 @@
+{%extends 'main.html'%}
+{%block content%}
+
+
+{%if authent%}
+<a href="{% url 'logo'%}">Logout</a>
+<p>hello {{u.Name}}</p>
+{%else%}
+<a href="{% url 'log'%}" >Login</a>
+<a href="{% url 'reg'%}">Register</a>
+{%endif%}
+
+
+
+{%endblock content%}
